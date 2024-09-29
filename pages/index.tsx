@@ -19,8 +19,8 @@ export default function Home() {
     >
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
+          // className="dark:invert"
+          src="https://m.yodycdn.com/blog/meme-meo-cam-dao-yody-vn-11.jpg"
           alt="Next.js logo"
           width={180}
           height={38}
@@ -72,7 +72,7 @@ export default function Home() {
         >
           <Image
             aria-hidden
-            src="https://nextjs.org/icons/file.svg"
+            src="https://m.yodycdn.com/blog/meme-meo-cam-dao-yody-vn-11.jpg"
             alt="File icon"
             width={16}
             height={16}
