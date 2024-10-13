@@ -10,3 +10,12 @@ export default function PostDetail() {
         </div>
     )
 }
+
+export async function getServerSideProps() {
+    //fake slow query
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
+    return {
+        props: {}
+    };
+}
