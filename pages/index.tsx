@@ -1,5 +1,7 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -13,6 +15,18 @@ const geistMono = localFont({
 });
 
 export default function Home() {
+  const router = useRouter();
+
+  function goToDetailPage() {
+    router.push({
+      pathname: '/post/[postId]',
+      query: {
+        postId: 420,
+        ref: 'social'
+      }
+    })
+  }
+
   return (
     <div
       className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
@@ -35,7 +49,16 @@ export default function Home() {
             .
           </li>
           <li>Save and see your changes instantly.</li>
+          <li>
+            <Link href="/about" 
+              prefetch={false}//Tắt tải file about js trước khi ấn
+            >Go to About</Link>
+          </li>
         </ol>
+
+        <div>
+          <button onClick={goToDetailPage}>Go to Detail</button>
+        </div>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a

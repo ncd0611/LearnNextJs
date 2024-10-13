@@ -2,7 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['m.yodycdn.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'm.yodycdn.com',
+        pathname: '**',
+      },
+    ],
   }
 };
 

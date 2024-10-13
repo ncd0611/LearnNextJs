@@ -1,0 +1,4 @@
+CSR: Client-Side Rendering: code HTML được render trực tiếp trên trình duyệt của người dùng bằng JavaScript
+SSR: Server-Side Rendering: render HTML trực tiếp trên server trước khi trang web được gửi đến trình duyệt của người dùng
+SSG: Static Site Generation: render trang web tĩnh tại thời điểm xây dựng
+ISR: Incremental Static Regeneration: kết hợp các yếu tố của Server-Side Rendering (SSR) và Static Site Generation (SSG)
